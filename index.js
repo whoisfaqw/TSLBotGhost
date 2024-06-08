@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Listening to TSL"];
+const statusMessages = ["The","Sunday","League"];
 
 
 let currentIndex = 0;
