@@ -36,7 +36,8 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["**PLAYING** The Sunday League"];
+client.user.setPresence({ game: { name: 'with depression' }, status: 'online' });
+bot.user.setGame('with depression', 'https://www.twitch.tv/rtx_gamingg');
 
 
 let currentIndex = 0;
