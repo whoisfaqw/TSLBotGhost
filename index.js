@@ -72,8 +72,10 @@ function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
- client.user.setPresence({ game: { name: 'with depression' }, status: 'online' });
-  bot.user.setGame('with depression', 'https://www.twitch.tv/rtx_gamingg');
+  client.user.setPresence({
+    activities: [{ name: currentStatus, type: ActivityType.Custom}],
+    status: 'dnd',
+  });
 
   
   const textChannel = client.channels.cache.get(channelId);
