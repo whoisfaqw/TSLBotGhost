@@ -36,8 +36,7 @@ app.listen(port, () => {
 });
 
 
-client.user.setPresence({ game: { name: 'with depression' }, status: 'online' });
-bot.user.setGame('with depression', 'https://www.twitch.tv/rtx_gamingg');
+const statusMessages = ["PLAYING","MUSIC"];
 
 
 let currentIndex = 0;
@@ -73,10 +72,8 @@ function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
-  client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Custom}],
-    status: 'dnd',
-  });
+ client.user.setPresence({ game: { name: 'with depression' }, status: 'online' });
+  bot.user.setGame('with depression', 'https://www.twitch.tv/rtx_gamingg');
 
   
   const textChannel = client.channels.cache.get(channelId);
