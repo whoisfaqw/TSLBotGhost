@@ -33,7 +33,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By RTX`);
 });
 
-const statusMessages = ["𝐖𝐀𝐓𝐂𝐇𝐈𝐍𝐆 The Sunday League"];
+const statusMessages = ["Playing The Sunday League"];
 
 let currentIndex = 0;
 const channelId = '';
